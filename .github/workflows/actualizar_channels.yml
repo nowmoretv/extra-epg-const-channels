@@ -1,0 +1,40 @@
+name: Generador de channels.js
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clonar repositorio
+      uses: actions/checkout@v4
+
+    - name: Descargar lista M3U privada
+      run: |
+        curl -sSL -H "Authorization: token ${{ secrets.GH_TOKEN }}" \
+             -H "Accept: application/vnd.github.v3.raw" \
+             -o lista.m3u \
+             "https://raw.githubusercontent.com/${{ github.repository_owner }}/lists/main/test.m3u"
+
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Generar channels.js
+      run: python channels_builder.py
+
+    - name: Guardar channels.js
+      run: |
+        git config --global user.name "Channels AutoBot"
+        git config --global user.email "bot@github.com"
+        git add channels.js
+        git commit -m "Auto-actualización de channels.js [skip ci]" || exit 0
+        git push
