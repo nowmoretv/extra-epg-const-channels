@@ -24,8 +24,10 @@ def obtener_categoria_por_dial(dial):
         return "Nacionales"
     elif 500 <= dial <= 599:
         return "Regionales"
-    elif 600 <= dial <= 998:
+    elif 600 <= dial <= 899:
         return "Locales"
+    elif 900 <= dial <= 969:
+        return "Series"
     elif 1000 <= dial <= 1020:
         return "Portugal"
     elif 1021 <= dial <= 1100:
