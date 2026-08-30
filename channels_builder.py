@@ -75,12 +75,24 @@ def generar_channels_js():
     with open(ARCHIVO_M3U, "r", encoding="utf-8", errors="ignore") as f:
         lineas = f.readlines()
 
-    for linea in lineas:
+    total_lineas = len(lineas)
+
+    for i, linea in enumerate(lineas):
         linea = linea.strip()
         if linea.startswith("#EXTINF:"):
-            # 1. Filtro: Si contiene "hidden", se ignora el canal por completo
+            # 1A. Filtro: Si contiene "hidden", se ignora el canal
             if re.search(r'\bhidden\b', linea, re.IGNORECASE):
                 continue
+
+            # 1B. Filtro: Si contiene un asterisco "*", se ignora el canal
+            if "*" in linea:
+                continue
+
+            # 1C. Filtro: Si la línea siguiente empieza por "#http", se ignora el canal
+            if i + 1 < total_lineas:
+                siguiente_linea = lineas[i + 1].strip()
+                if siguiente_linea.lower().startswith("#http"):
+                    continue
 
             # 2. Dial (tvg-chno)
             chno_match = re.search(r'tvg-chno="([^"]*)"', linea)
