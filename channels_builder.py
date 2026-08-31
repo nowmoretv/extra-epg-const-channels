@@ -135,7 +135,6 @@ def generar_channels_js():
 
     print(f"--> Generando {ARCHIVO_SALIDA} con {len(lista_canales)} canales...")
     with open(ARCHIVO_SALIDA, "w", encoding="utf-8") as f_js:
-        f_js.write("// Archivo generado automáticamente por GitHub Actions\n")
         f_js.write("const CHANNELS = [\n")
         for c in lista_canales:
             f_js.write(
