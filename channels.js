@@ -16,7 +16,7 @@ const CHANNELS = [
   { dial: 31, id: "", name: "FanCode 1 (IN)", category: "Deportes", logo: "https://raw.githubusercontent.com/infiniteott/logos/refs/heads/main/f/fancode.png" },
   { dial: 32, id: "", name: "FanCode 2 (IN)", category: "Deportes", logo: "https://raw.githubusercontent.com/infiniteott/logos/refs/heads/main/f/fancode.png" },
   { dial: 41, id: "ESPN CL", name: "ESPN", category: "Deportes", logo: "https://raw.githubusercontent.com/infiniteott/logos/refs/heads/main/e/espn.png" },
-  { dial: 42, id: "ESPN 2 CL", name: "ESPN 2", category: "Deportes", logo: "https://raw.githubusercontent.com/infiniteott/logos/refs/heads/main//espn-2.png" },
+  { dial: 42, id: "ESPN 2 CL", name: "ESPN 2", category: "Deportes", logo: "https://raw.githubusercontent.com/infiniteott/logos/refs/heads/main/e/espn-2.png" },
   { dial: 43, id: "ESPN 3 CL", name: "ESPN 3", category: "Deportes", logo: "https://raw.githubusercontent.com/infiniteott/logos/refs/heads/main/e/espn-3.png" },
   { dial: 44, id: "ESPN 4 CL", name: "ESPN 4", category: "Deportes", logo: "https://raw.githubusercontent.com/infiniteott/logos/refs/heads/main/e/espn-4.png" },
   { dial: 45, id: "ESPN 5 CL", name: "ESPN 5", category: "Deportes", logo: "https://raw.githubusercontent.com/infiniteott/logos/refs/heads/main/e/espn-5.png" },
