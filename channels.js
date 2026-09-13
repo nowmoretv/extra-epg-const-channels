@@ -1,5 +1,4 @@
 const CHANNELS = [
-  { dial: 1, id: "", name: "Eventos", category: "Otros", logo: "https://infiniteott.github.io/logos/e/eventos.png" },
   { dial: 12, id: "Hypermotion", name: "LaLiga Hypermotion", category: "Deportes", logo: "https://raw.githubusercontent.com/infiniteott/logos/refs/heads/main/l/laliga-tv-hypermotion.png" },
   { dial: 16, id: "DSPORTS UY", name: "DSPORTS", category: "Deportes", logo: "https://raw.githubusercontent.com/infiniteott/logos/refs/heads/main/d/directv-sports-color.png" },
   { dial: 17, id: "DSPORTS 2 UY", name: "DSPORTS 2", category: "Deportes", logo: "https://raw.githubusercontent.com/infiniteott/logos/refs/heads/main/d/directv-sports-2-color.png" },
